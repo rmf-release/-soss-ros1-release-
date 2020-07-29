@@ -1,0 +1,12 @@
+Source: ros-melodic-soss-genmsg
+Section: misc
+Priority: optional
+Maintainer: Grey <grey@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), libyaml-cpp-dev, ros-eloquent-soss-core, ros-melodic-catkin, ros-melodic-genmsg
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-soss-genmsg
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-eloquent-soss-core, ros-melodic-genmsg
+Description: The SOSS genmsg package

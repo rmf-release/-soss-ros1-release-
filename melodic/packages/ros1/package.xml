@@ -1,4 +1,4 @@
-<package>
+<package format="3">
   <name>soss-ros1</name>
   <version>2.0.0</version>
   <description>The SOSS ros1 plugin package</description>

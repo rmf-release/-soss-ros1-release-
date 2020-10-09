@@ -51,5 +51,5 @@ index 1c02dd4..8dfaa1f 100755
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
  	dh_auto_install
 -- 
-2.17.1
+2.25.1
 

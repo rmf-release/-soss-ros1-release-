@@ -1,4 +1,4 @@
-From 329979a57f535d84d07d8bfe4a507bef7c14e836 Mon Sep 17 00:00:00 2001
+From cb727d260a1689b6a29fa337bf5085ac65d8dfbf Mon Sep 17 00:00:00 2001
 From: "Marco A. Gutierrez" <marco@openrobotics.org>
 Date: Fri, 9 Oct 2020 12:09:45 +0800
 Subject: [PATCH 1/2] sourcing foxy for soss-core deps

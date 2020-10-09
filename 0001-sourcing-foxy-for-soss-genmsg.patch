@@ -1,4 +1,4 @@
-From ad1f61632a2a77f91c14e063e74e11478a452ce6 Mon Sep 17 00:00:00 2001
+From 1a03b58e31e3d5d07aa52404b892a29ffe3681d4 Mon Sep 17 00:00:00 2001
 From: "Marco A. Gutierrez" <marco@openrobotics.org>
 Date: Fri, 9 Oct 2020 04:39:51 +0000
 Subject: [PATCH] sourcing foxy for soss-genmsg

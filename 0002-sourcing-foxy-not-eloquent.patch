@@ -1,53 +1,58 @@
-From f44fe05b8c41a9a66c32f23ca2ec6524e3c5a62a Mon Sep 17 00:00:00 2001
+From f88eb9ae58fef51604c3263bf970f2b6dff7eba2 Mon Sep 17 00:00:00 2001
 From: "Marco A. Gutierrez" <marco@openrobotics.org>
-Date: Fri, 9 Oct 2020 04:39:51 +0000
-Subject: [PATCH 1/2] sourcing foxy for soss-genmsg
+Date: Fri, 9 Oct 2020 04:57:45 +0000
+Subject: [PATCH 2/2] sourcing foxy not eloquent
 
 ---
- debian/rules.em | 5 +++++
- 1 file changed, 5 insertions(+)
+ debian/rules.em | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
 
 diff --git a/debian/rules.em b/debian/rules.em
-index 1c02dd4..2b43a50 100755
+index 2b43a50..5194d22 100755
 --- a/debian/rules.em
 +++ b/debian/rules.em
-@@ -25,6 +25,7 @@ override_dh_auto_configure:
+@@ -25,7 +25,7 @@ override_dh_auto_configure:
  	# In case we're installing to a non-standard location, look for a setup.sh
  	# in the install tree that was dropped by catkin, and source it.  It will
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
-+	if [ -f "/opt/ros/eloquent/setup.sh" ]; then . "/opt/ros/eloquent/setup.sh"; fi && \
+-	if [ -f "/opt/ros/eloquent/setup.sh" ]; then . "/opt/ros/eloquent/setup.sh"; fi && \
++	if [ -f "/opt/ros/foxy/setup.sh" ]; then . "/opt/ros/foxy/setup.sh"; fi && \
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
  	dh_auto_configure -- \
  		-DCATKIN_BUILD_BINARY_PACKAGE="1" \
-@@ -35,6 +36,7 @@ override_dh_auto_build:
+@@ -36,7 +36,7 @@ override_dh_auto_build:
  	# In case we're installing to a non-standard location, look for a setup.sh
  	# in the install tree that was dropped by catkin, and source it.  It will
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
-+	if [ -f "/opt/ros/eloquent/setup.sh" ]; then . "/opt/ros/eloquent/setup.sh"; fi && \
+-	if [ -f "/opt/ros/eloquent/setup.sh" ]; then . "/opt/ros/eloquent/setup.sh"; fi && \
++	if [ -f "/opt/ros/foxy/setup.sh" ]; then . "/opt/ros/foxy/setup.sh"; fi && \
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
  	dh_auto_build
  
-@@ -43,6 +45,7 @@ override_dh_auto_test:
+@@ -45,7 +45,7 @@ override_dh_auto_test:
  	# in the install tree that was dropped by catkin, and source it.  It will
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
  	echo -- Running tests. Even if one of them fails the build is not canceled.
-+	if [ -f "/opt/ros/eloquent/setup.sh" ]; then . "/opt/ros/eloquent/setup.sh"; fi && \
+-	if [ -f "/opt/ros/eloquent/setup.sh" ]; then . "/opt/ros/eloquent/setup.sh"; fi && \
++	if [ -f "/opt/ros/foxy/setup.sh" ]; then . "/opt/ros/foxy/setup.sh"; fi && \
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
  	dh_auto_test || true
  
-@@ -50,6 +53,7 @@ override_dh_shlibdeps:
+@@ -53,7 +53,7 @@ override_dh_shlibdeps:
  	# In case we're installing to a non-standard location, look for a setup.sh
  	# in the install tree that was dropped by catkin, and source it.  It will
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
-+	if [ -f "/opt/ros/eloquent/setup.sh" ]; then . "/opt/ros/eloquent/setup.sh"; fi && \
+-	if [ -f "/opt/ros/eloquent/setup.sh" ]; then . "/opt/ros/eloquent/setup.sh"; fi && \
++	if [ -f "/opt/ros/foxy/setup.sh" ]; then . "/opt/ros/foxy/setup.sh"; fi && \
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
  	dh_shlibdeps -l$(CURDIR)/debian/@(Package)/@(InstallationPrefix)/lib/
  
-@@ -57,5 +61,6 @@ override_dh_auto_install:
+@@ -61,6 +61,6 @@ override_dh_auto_install:
  	# In case we're installing to a non-standard location, look for a setup.sh
  	# in the install tree that was dropped by catkin, and source it.  It will
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
-+	if [ -f "/opt/ros/eloquent/setup.sh" ]; then . "/opt/ros/eloquent/setup.sh"; fi && \
+-	if [ -f "/opt/ros/eloquent/setup.sh" ]; then . "/opt/ros/eloquent/setup.sh"; fi && \
++	if [ -f "/opt/ros/foxy/setup.sh" ]; then . "/opt/ros/foxy/setup.sh"; fi && \
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
  	dh_auto_install
 -- 
